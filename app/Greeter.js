@@ -1,4 +1,4 @@
-// var config = require('./config.json');  // 引入包含打招呼内容的json文件 
+// var config = require('./config.json'); 
 
 // module.exports = function() {
 //     var greet = document.createElement('div');
@@ -7,14 +7,14 @@
 // }
 
 import React, {Component} from 'react';
-import config from './config.json';
+import config from './config.json'; // 拿到config对象
 
 class Greeter extends Component {
     render() {
         return (    // 返回一个React组件
             <div>
-                {config.greetText}
-            </div>
+                 {config.greetText}
+             </div>
         )
     }
 }

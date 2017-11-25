@@ -7,6 +7,7 @@ module.exports = {
     },
     devServer: {
         contentBase: './public',  // 本地服务器所加载的页面所在的目录
+        port: "8081",
         historyApiFallback: true, // 不跳转
         inline: true // 实时刷新
     },
@@ -15,10 +16,10 @@ module.exports = {
             {
                 test: /(\.jsx|\.js)$/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: 'babel-loader', // 把ES6 ES 7转成ES5 将基于JS拓展的语言如React JSX转成浏览器能识别的JS版本
                     options: {
                         presets: [
-                            "es2015", "react"   // 可以处理jsx和ES 6
+                            "es2015", "react"   // 可以处理ES 6和jsx
                         ]
                     }
                 },
